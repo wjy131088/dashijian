@@ -1,4 +1,4 @@
-const getUserInfo = function () {
+function getUserInfo() {
   $.ajax({
     type: "GET",
     url: "/my/userinfo",
@@ -15,7 +15,7 @@ const renderAvatar = (data) => {
   let name = data.nickname || data.username;
   // console.log(name);
   // 设置欢迎文本
-  $("#welcom").html("欢迎" + name);
+  $("#welcome").html("欢迎" + name);
   // 按需渲染用户头像
   if (data.user_pic !== null) {
     // 渲染图片头像
